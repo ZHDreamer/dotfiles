@@ -16,6 +16,7 @@ if [ $(uname -r | sed -n 's/.*\( *Microsoft *\).*/\1/ip') ];then
     export ALL_PROXY="http://$host_ip:10809"
 fi
 
+export PATH=/home/zhdreamer/.local/bin/:$PATH
 
 #  █████╗ ██╗     ██╗ █████╗ ███████╗
 # ██╔══██╗██║     ██║██╔══██╗██╔════╝
