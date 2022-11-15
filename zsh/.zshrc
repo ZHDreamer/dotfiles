@@ -7,16 +7,18 @@ fi
 
 zmodload zsh/zprof
 export EDITOR=nvim
-
+export TERM=xterm-256color
 
 # wsl proxy setting
-if [ $(uname -r | sed -n 's/.*\( *Microsoft *\).*/\1/ip') ];then
-    host_ip=$(cat /etc/resolv.conf |grep "nameserver" |cut -f 2 -d " ")
-    # Use default v2rayN http port
-    export ALL_PROXY="http://$host_ip:10809"
-fi
+# if [ $(uname -r | sed -n 's/.*\( *Microsoft *\).*/\1/ip') ];then
+#     host_ip=$(cat /etc/resolv.conf |grep "nameserver" |cut -f 2 -d " ")
+#     # Use default v2rayN http port
+#     export ALL_PROXY="http://$host_ip:7890"
+# fi
 
 export PATH=/home/zhdreamer/.local/bin/:$PATH
+
+export CLASSPATH=.:/home/zhdreamer/Code/Xidian/Algorithm/pack/algs4.jar:$CLASSPATH
 
 #  █████╗ ██╗     ██╗ █████╗ ███████╗
 # ██╔══██╗██║     ██║██╔══██╗██╔════╝
